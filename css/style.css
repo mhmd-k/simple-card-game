@@ -1,0 +1,289 @@
+/* global rules */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+button {
+  cursor: pointer;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+/* end global ruls */
+.start {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #3f51b5;
+}
+.start::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+}
+.start .container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.start .container button {
+  border: 0;
+  background-color: #c10e4b;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 4px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.start .container button:hover {
+  background-color: black;
+}
+.actual-game {
+  display: none;
+  position: relative;
+}
+/* high scores */
+.high-scores {
+  position: absolute;
+  background-color: #3f51b5;
+  left: 0;
+  top: 0;
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  padding: 40px;
+  display: none;
+}
+#close {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+.high-scores #close::before,
+.high-scores #close::after {
+  content: "";
+  width: 3px;
+  height: 20px;
+  position: absolute;
+  background-color: white;
+  cursor: pointer;
+}
+.high-scores #close::before {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+.high-scores #close::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+.high-scores .line {
+  display: flex;
+  gap: 20px;
+}
+/* end high scores */
+/* header */
+header {
+  background-color: #3f51b5;
+}
+header .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 0;
+  flex-wrap: wrap;
+}
+header .container .counter {
+  display: flex;
+  color: white;
+}
+button#restart,
+button#reload {
+  border: 0;
+  background-color: #c10e4b;
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+button#restart:hover,
+button#reload:hover {
+  background-color: black;
+}
+header .container div {
+  color: white;
+}
+/* end header */
+/* card container */
+.father {
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+.father .container {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(auto, 140px));
+  gap: 20px 50px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  perspective: 800px;
+}
+.father .container .card {
+  height: 140px;
+  border: 5px solid black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: transform 0.8s;
+  -moz-transition: transform 0.8s;
+  -ms-transition: transform 0.8s;
+  -o-transition: transform 0.8s;
+}
+.father .container.cant-click {
+  pointer-events: none;
+}
+.father .container .card.open {
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+}
+.father .container .card.done {
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+}
+@media (max-width: 767px) {
+  .father .container {
+    gap: 8px 2px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.father .container .card div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.father .container .card .front {
+  position: absolute;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  background-color: #3f51b5;
+  font-weight: 700;
+  font-size: 80px;
+}
+.father .container .card .back {
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  overflow: hidden;
+  background-color: #3f51b5;
+}
+.father .container .card .back img {
+  width: 100%;
+}
+/* end cards container */
+/* winer section */
+.win {
+  height: 100vh;
+  background-color: #3f51b5;
+  display: none;
+}
+.win .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+  flex-direction: column;
+}
+.win .container .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+}
+.win .container .content span {
+  color: #ffeb3b;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 10px;
+}
+/* end winer section */

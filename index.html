@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>cards-game</title>
+  </head>
+  <body>
+    <div class="start">
+      <div class="container">
+        <button id="start">START</button>
+      </div>
+    </div>
+    <!-- start of the actual game -->
+    <div class="actual-game">
+      <!-- header -->
+      <header>
+        <div class="container">
+          <button id="restart">Restart</button>
+          <div class="counter">
+            <div class="unit">
+              <span class="minutes">00</span>
+            </div>
+            <div>:</div>
+            <div class="unit">
+              <span class="secondes">00</span>
+            </div>
+          </div>
+          <div class="name">Name: <span></span></div>
+          <div class="score">Your Score: <span>00</span></div>
+        </div>
+      </header>
+      <!-- end header -->
+      <!-- cards -->
+      <div class="father">
+        <div class="container">
+          <div class="card" data-set="bootstrap">
+            <div class="back">
+              <img src="images/bootstrap.png" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="bootstrap">
+            <div class="back">
+              <img src="images/bootstrap.png" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="javascript">
+            <div class="back">
+              <img src="images/javascript.jpeg" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="javascript">
+            <div class="back">
+              <img src="images/javascript.jpeg" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="css">
+            <div class="back">
+              <img src="images/css.png" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="css">
+            <div class="back">
+              <img src="images/css.png" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="github">
+            <div class="back">
+              <img src="images/github.png" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="github">
+            <div class="back">
+              <img src="images/github.png" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="html">
+            <div class="back">
+              <img src="images/html.png" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="html">
+            <div class="back">
+              <img src="images/html.png" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="python">
+            <div class="back">
+              <img src="images/python.png" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="python">
+            <div class="back">
+              <img src="images/python.png" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="vue">
+            <div class="back">
+              <img src="images/vue.png" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="vue">
+            <div class="back">
+              <img src="images/vue.png" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="vs-code">
+            <div class="back">
+              <img src="images/vscode.jpg" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="vs-code">
+            <div class="back">
+              <img src="images/vscode.jpg" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="react">
+            <div class="back">
+              <img src="images/react.png" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="react">
+            <div class="back">
+              <img src="images/react.png" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="c#">
+            <div class="back">
+              <img src="images/c.png" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+          <div class="card" data-set="c#">
+            <div class="back">
+              <img src="images/c.png" alt="" />
+            </div>
+            <div class="front">!</div>
+          </div>
+        </div>
+      </div>
+      <!-- end cards -->
+    </div>
+    <!-- end of the actual game -->
+    <!-- you win section -->
+    <div class="win">
+      <div class="container">
+        <div class="content">
+          YOU HAVE WON <span></span> YOUR SCORE: <span></span>
+        </div>
+        <button id="reload">Restart</button>
+      </div>
+    </div>
+    <!-- end of you win section -->
+    <script src="main.js"></script>
+  </body>
+</html>
