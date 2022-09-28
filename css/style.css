@@ -1,4 +1,8 @@
 /* global rules */
+:root {
+  --bg-color: #0e1c36;
+  --main-color: #009688;
+}
 *,
 *::before,
 *::after {
@@ -10,7 +14,7 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #0e1c36;
+  background-color: var(--bg-color);
 }
 button {
   cursor: pointer;
@@ -45,18 +49,7 @@ button {
 .start {
   height: 100vh;
   width: 100%;
-  position: relative;
-  background-color: #0e1c36;
-}
-.start::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: black;
-  opacity: 0.5;
+  background-color: var(--bg-color);
 }
 .start .container {
   position: absolute;
@@ -75,24 +68,25 @@ button {
 }
 .start .container button {
   border: 0;
-  background-color: #009688;
+  background-color: var(--main-color);
   border-radius: 2px;
   padding: 10px 20px;
   color: white;
   font-weight: bold;
   letter-spacing: 4px;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
+  opacity: 1;
 }
 .start .container button:hover {
-  background-color: #0096889e;
+  opacity: 0.6;
 }
 .actual-game {
   display: none;
@@ -101,8 +95,8 @@ button {
 }
 /* header */
 header {
-  background-color: #0e1c36;
-  color: #009688;
+  background-color: var(--bg-color);
+  color: var(--main-color);
   box-shadow: 0px -12px 14px 0px white;
 }
 header .container {
@@ -119,27 +113,28 @@ header .container .counter {
 button#restart,
 button#reload {
   border: 0;
-  background-color: #009688;
+  background-color: var(--main-color);
   border-radius: 2px;
   padding: 10px;
   color: white;
   font-weight: bold;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
+  opacity: 1;
 }
 button#restart:hover,
 button#reload:hover {
-  background-color: #0096889e;
+  opacity: 0.6;
 }
 header .container div {
-  color: #009688;
+  color: var(--main-color);
 }
 /* end header */
 /* card container */
@@ -159,7 +154,7 @@ header .container div {
 .father .container .card {
   height: 25%;
   width: calc(100% / 6);
-  border: 2px solid #009688;
+  border: 2px solid var(--main-color);
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -204,9 +199,9 @@ header .container div {
   position: absolute;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background-color: #0e1c36;
+  background-color: var(--bg-color);
   font-size: 40px;
-  color: #009688;
+  color: var(--main-color);
 }
 .father .container .card .back {
   transform: rotateY(-180deg);
@@ -217,7 +212,7 @@ header .container div {
   overflow: hidden;
   background-color: white;
   font-size: 100px;
-  color: #0e1c36;
+  color: var(--bg-color);
 }
 @media (max-width: 767px) {
   .father .container .card {
@@ -240,7 +235,7 @@ header .container div {
 /* winer section */
 .win {
   height: 100vh;
-  background-color: #3f51b5;
+  background-color: var(--bg-color);
   display: none;
 }
 .win .container {
@@ -255,12 +250,12 @@ header .container div {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--main-color);
   flex-direction: column;
 }
 .win .container .content span {
-  color: #ffeb3b;
   font-weight: bold;
+  color: white;
   font-size: 30px;
   padding: 10px;
 }
